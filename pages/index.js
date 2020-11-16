@@ -17,16 +17,16 @@ export default function Home() {
       </header>
       <div className={styles.nav}>
         <Link href="/about">
-          <a>ABOUT ME</a>
+          <a><span>ABOUT ME</span></a>
         </Link>
         <Link href="/blog">
-          <a>BLOG</a>
+          <a><span>BLOG</span></a>
         </Link>
         <Link href="/portfolio">
-          <a>PORTFOLIO</a>
+          <a><span>PORTFOLIO</span></a>
         </Link>
         <Link href="/contact">
-          <a>CONTACT ME</a>
+          <a><span>CONTACT ME</span></a>
         </Link>
       </div>
       <div className={styles.socials}>

@@ -4,6 +4,12 @@
     left: 30%;
     padding-top: 10%;
     position: fixed;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 .sidebar {
@@ -47,8 +53,8 @@
 }
 
 .nav a {
-    font-family: 'VT323';
-    font-size: 18px;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
     cursor: pointer;
     background: #eeeeee;
     color: #666666;
@@ -58,10 +64,18 @@
     transition: all 0.5s;
 }
 
-.nav a:before {
+.button span {
+    cursor: pointer;
+    display: inline-block;
     position: relative;
-    content: '+';
-    left: 0;
+    transition: 0.5s;
+}
+
+.nav span:before {
+    position: relative;
+    content: '→';
+    margin-right: 2px;
+    left: 5px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -69,13 +83,17 @@
 .nav a:hover {
     background: #dddddd;
     text-decoration: none;
-    left: 5px;
     transition: 0.5s;
 }
 
-.nav a:hover::before {
+.nav a:hover span {
+    padding-left: 10px;
     transition: 0.5s;
-    left: -5px;
+}
+
+.nav a:hover span:before {
+    transition: 0.5s;
+    left: 0px;
     opacity: 1;
 }
 

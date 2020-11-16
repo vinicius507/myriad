@@ -1,0 +1,130 @@
+.container{
+    width: 620px;
+    height: 100%;
+    left: 30%;
+    padding-top: 10%;
+    position: fixed;
+}
+
+.sidebar {
+    display: block;
+    position: relative;
+    background: #ffffff;
+    padding: 24px 24px;
+    height: auto;
+    width: 360px;
+    z-index: 5;
+}
+
+.header {
+    margin: 0;
+    width: 100%;
+}
+
+.header h1 {
+    position: relative;
+    color: #222222;
+    font-size: 500%;
+    text-align: end;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.header p {
+    font-family: monospace;
+    color: #222222;
+    text-align: end;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.nav {
+    display: flex;
+    flex: content;
+    flex-direction: column;
+}
+
+.nav a {
+    font-family: 'VT323';
+    font-size: 16px;
+    cursor: pointer;
+    background: #eeeeee;
+    color: #666666;
+    width: 100%;
+    padding-left: 12px;
+    margin: 4px 0px;
+    transition: all 0.5s;
+}
+
+.nav a:before {
+    position: relative;
+    content: '+';
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.nav a:hover {
+    background: #dddddd;
+    text-decoration: none;
+    left: 5px;
+    transition: 0.5s;
+}
+
+.nav a:hover::before {
+    transition: 0.5s;
+    left: -5px;
+    opacity: 1;
+}
+
+.socials {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.socials a {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.socials a:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.socials img {
+    width: 32px;
+    height: auto;
+    margin: 0 8px;
+}
+
+.picture {
+    z-index: 0;
+    width: 360px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    top: 30%;
+    display: block;
+    z-index: 3;
+}
+
+@media all and (orientation: portrait) {
+    .body { background: #ffffff; }
+    .container { width: 100%; left: 0; top: 0; padding-top: 0; }
+    .sidebar { 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+    .picture { width: 0; height:0; }
+}

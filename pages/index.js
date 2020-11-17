@@ -13,7 +13,7 @@ export default function Home() {
 
       <header className={styles.header}>
         <h1>_{siteTitle}</h1>
-        <p>Vinícius Gonçalves<br />Developer</p>
+        <p className={styles.description}>Vinícius Gonçalves<br />Developer</p>
       </header>
       <div className={styles.nav}>
         <Link href="/about">

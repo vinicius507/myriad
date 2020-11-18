@@ -3,8 +3,10 @@ import { AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter onExitComplete>
+      <AnimateSharedLayout>
         <Component {...pageProps} />
+      </AnimateSharedLayout>
     </AnimatePresence>
   )
 }

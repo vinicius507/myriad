@@ -169,7 +169,6 @@
 }
 
 @media all and (orientation: portrait) {
-    .body { background: #ffffff; }
     .container { width: 100%; left: 0; top: 0; padding-top: 0; }
     .sidebar { 
         width: 100%;
@@ -220,4 +219,6 @@
         position: relative;
         transition: 0.5s;
     }
+
+    .contactPage { left: -620px; }
 }

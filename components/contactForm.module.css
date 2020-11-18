@@ -1,0 +1,110 @@
+.container input, .container textarea {
+    box-shadow: none;
+    background-color: #eeeeee;
+    color: #222222;
+    line-height: 2;
+    padding: 4px 0 4px 12px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    border: 0;
+    border-radius: 2px;
+    border-bottom: solid 2px;
+    border-color: #eeeeee;
+    transition: border 0.5s ease-in-out;
+}
+
+.container input:focus, .container textarea:focus {
+    border: 0;
+    border-bottom: solid 2px;
+    border-color: #0070f3;
+    transition: 0.5s;
+}
+
+.container input:required, .container textarea:required {
+    border-color: #e7373e;
+    transition: 0.5s;
+}
+
+.container input:required:valid, .container textarea:required:valid {
+    border-color: #eeeeee;
+    transition: 0.5s;
+}
+
+.container input:focus:required:valid, .container textarea:focus:required:valid {
+    border-color: #0070f3;
+    transition: 0.5s;
+}
+
+.contactInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactDetail {
+    display: inline-block;
+    width: 48%;
+}
+
+.contactDetail input {
+    width: 100%;
+}
+
+.message {
+    width: 100%;
+}
+
+.message input, .message textarea {
+    width: 100%;
+}
+
+.message textarea {
+    height: 200px;
+    resize: none;
+}
+
+.submit {
+    position: relative;
+    float: right;
+    border: none;
+    margin-top: 8px;
+    border-radius: 2px;
+    padding: 8px 24px;
+    padding-bottom: 10px;
+    background-color: #0070f3;
+    color: #eeeeee;
+    transition: all 0.5s ease-in-out;
+}
+
+.submit:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.submitting {
+    background-color: #cccccc;
+    color: #222222;
+    transition: 0.5s;
+    cursor: none;
+}
+
+.submitted {
+    background-color: #0cca4a;
+    color: #eeeeee;
+    transition: 0.5s;
+}
+
+.result {
+    position: absolute;
+    bottom: 30px;
+    font-size: 14px;
+    color: #666666;
+}
+
+@media all and (orientation: portrait) {
+    .contactInfo { flex-direction: column; }
+    .contactDetail { width: 100%; }
+}

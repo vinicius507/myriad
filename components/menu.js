@@ -37,6 +37,7 @@ export default function Menu({ home, contact, children }) {
                     <motion.div
                         className={styles.nav}
                         variants={menu}
+                        layoutId="menu"
                     >
                         {!home && (
                             <Link href="/">

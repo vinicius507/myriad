@@ -1,11 +1,19 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
 export default function Blog() {
     return (
-        <motion.h1 initial="initial" animate="enter" exit="exit" variants={test}>
-            Hey go <Link href="/"><a>Back to home.</a></Link>
-        </motion.h1>)
+        <>
+            <Head>
+                <title>Blog</title>
+                <meta lang="en_US" />
+            </Head>
+            <motion.h1 initial="initial" animate="enter" exit="exit" variants={test}>
+                Hey go <Link href="/"><a>Back to home.</a></Link>
+            </motion.h1>
+        </>
+    )
 }
 
 const test = {

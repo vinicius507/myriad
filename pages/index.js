@@ -3,10 +3,12 @@ import LayoutHome, { siteTitle } from '../components/layoutHome'
 
 export default function Home() {
   return (
-    <LayoutHome home>
+    <>
       <Head>
         <title>{siteTitle}</title>
+        <meta lang="en_US" />
       </Head>
-    </LayoutHome>
+      <LayoutHome home />
+    </>
   )
 }

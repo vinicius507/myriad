@@ -1,3 +1,4 @@
+import Head from 'nex/head'
 import Link from 'next/link'
 import LayoutHome from '../components/layoutHome'
 import styles from '../components/layoutHome.module.css'
@@ -5,13 +6,19 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <LayoutHome>
-            <motion.header className={styles.header} variants={header}>
-                <motion.h1 variants={headerItem}>_About</motion.h1>
-                <motion.p className={styles.about} variants={headerItem}>21 years old brazilian Computer Science student at Federal University of Paraíba(UFPB) , currently working around with Python programming and Next.js Web Development. Open Source enthusiast.</motion.p>
-                <motion.p className={styles.about} variants={headerItem}>If you wish to know more about my projects and ideas, check out my <Link href="/blog"><a>blog</a></Link>.</motion.p>
-            </motion.header>
-        </LayoutHome>
+        <>
+            <Head>
+                <title>About</title>
+                <meta lang="en_US" />
+            </Head>
+            <LayoutHome>
+                <motion.header className={styles.header} variants={header}>
+                    <motion.h1 variants={headerItem}>_About</motion.h1>
+                    <motion.p className={styles.about} variants={headerItem}>21 years old brazilian Computer Science student at Federal University of Paraíba(UFPB) , currently working around with Python programming and Next.js Web Development. Open Source enthusiast.</motion.p>
+                    <motion.p className={styles.about} variants={headerItem}>If you wish to know more about my projects and ideas, check out my <Link href="/blog"><a>blog</a></Link>.</motion.p>
+                </motion.header>
+            </LayoutHome>
+        </>
     )
 }
 

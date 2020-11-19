@@ -1,13 +1,18 @@
+import Head from 'next/head'
+import Link from 'next/link'
 import LayoutHome from '../components/layoutHome'
 import styles from '../styles/contact.module.css'
 import ContactForm from '../components/contactForm'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 
 export default function Contact() {
     return (
         <>
+            <Head>
+                <title>About</title>
+                <meta lang="en_US" />
+            </Head>
             <LayoutHome contact />
             <motion.div
                 className={styles.container}

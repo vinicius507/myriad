@@ -1,5 +1,6 @@
-import styles from './layoutHome.module.css'
+import styles from './menu.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import { siteTitle } from './layoutHome'
 import { motion } from "framer-motion";
 
@@ -99,15 +100,19 @@ export default function Menu({ home, contact, children }) {
 
 const SocialDiv = () => {
     return (
-        <motion.div className={styles.socials} variants={socials}>
+        <motion.div
+            className={styles.socials}
+            variants={socials}
+            layoutId="socials"
+        >
             <a>
-                <motion.img variants={socialIcon} layoutId="socialG"
+                <img
                     src="/images/GitHub.png"
                     alt="Github"
                 />
             </a>
             <a>
-                <motion.img variants={socialIcon} layoutId="socialT"
+                <img
                     src="images/Twitter.png"
                     alt="Twitter"
                 />
@@ -211,14 +216,6 @@ const headerItem = {
 }
 
 export const socials = {
-    enter: {
-        transition: {
-            delayChildren: 0.2,
-        }
-    }
-}
-
-export const socialIcon = {
     initial: {
         opacity: 0,
     },

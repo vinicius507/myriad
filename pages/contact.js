@@ -11,7 +11,7 @@ export default function Contact() {
         <>
             <Head>
                 <title>About</title>
-                <meta lang="en_US" />
+                <meta name="description" content="I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me." />
             </Head>
             <LayoutHome contact />
             <motion.div
@@ -22,7 +22,7 @@ export default function Contact() {
                 variants={container}
                 layoutId="contactContainer"
             >
-                <Link href="/"><a className={styles.exit}><img src="/images/exit.png" /></a></Link>
+                <Link href="/"><a className={styles.exit}><img src="/images/exit.png" alt="close" /></a></Link>
                 <header className={styles.header}>
                     <h1>Contact Me</h1>
                     <p>I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me using the following form.</p>

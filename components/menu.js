@@ -103,11 +103,13 @@ const SocialDiv = () => {
             <a>
                 <motion.img variants={socialIcon} layoutId="socialG"
                     src="/images/GitHub.png"
+                    alt="Github"
                 />
             </a>
             <a>
                 <motion.img variants={socialIcon} layoutId="socialT"
                     src="images/Twitter.png"
+                    alt="Twitter"
                 />
             </a>
         </motion.div>

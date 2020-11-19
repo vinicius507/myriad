@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>{siteTitle}</title>
-        <meta lang="en_US" />
+        <meta name="description" content="Hire professional freelancer and Web Developer. Building interactive experiences." />
       </Head>
       <LayoutHome home />
     </>

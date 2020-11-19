@@ -9,7 +9,7 @@ export default function About() {
         <>
             <Head>
                 <title>About</title>
-                <meta lang="en_US" />
+                <meta name="description" content="21 years old brazilian Computer Science student at Federal University of Paraíba(UFPB), currently working around with Python programming and Next.js Web Development. Open Source enthusiast." />
             </Head>
             <LayoutHome>
                 <motion.header className={styles.header} variants={header}>

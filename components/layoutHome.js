@@ -12,7 +12,7 @@ export default function LayoutHome({ children, home, contact }) {
                 {children}
             </Menu>
             <motion.div className={styles.picture} initial="initial" animate="enter" exit="exit" variants={container} layoutId="picture">
-                <img src="/images/picture.png" />
+                <img src="/images/picture.png" alt="me" />
             </motion.div>
         </div>
     )

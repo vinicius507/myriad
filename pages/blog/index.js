@@ -7,7 +7,7 @@ export default function Blog() {
         <>
             <Head>
                 <title>Blog</title>
-                <meta lang="en_US" />
+                <meta name="description" content="My Personal Blog. Anything tech-related that inpires me." />
             </Head>
             <motion.h1 initial="initial" animate="enter" exit="exit" variants={test}>
                 Hey go <Link href="/"><a>Back to home.</a></Link>

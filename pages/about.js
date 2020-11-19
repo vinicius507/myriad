@@ -1,4 +1,4 @@
-import Head from 'nex/head'
+import Head from 'next/head'
 import Link from 'next/link'
 import LayoutHome from '../components/layoutHome'
 import styles from '../components/layoutHome.module.css'

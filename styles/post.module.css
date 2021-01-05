@@ -1,0 +1,70 @@
+.header {
+  margin-bottom: 4vmin;
+}
+
+.title {
+  color: #111111;
+  margin: 0;
+  font-family: "Faustina", serif;
+  font-weight: 400;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  float: left;
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about span {
+  margin-left: 1vmin;
+  font-size: 1.6vmin;
+  color: #111111;
+}
+
+.categories a {
+  margin-right: 0.5vmin;
+  color: #666666;
+  font-weight: 700;
+  font-size: 1.2vmin;
+  background-color: #e8e8e8;
+  padding: 0.5vmin 1vmin;
+  border-radius: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.categories a:hover {
+  text-decoration: none;
+  background-color: #dddddd;
+  color: #444444;
+  transition: 0.5s;
+}
+
+.content {
+  color: #111111;
+}
+
+.footer {
+  background-color: #eeeeee;
+  margin: 4vmin -4vmin  0;
+  padding: 0 2vmin;
+  text-align: end;
+}
+
+.footer > p {
+  color: #888;
+  line-height: 3vmin;
+  font-size: 1.5vmin;
+  font-weight: 700;
+}

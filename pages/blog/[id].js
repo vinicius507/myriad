@@ -23,7 +23,7 @@ export default function Post({ postData }) {
             ))}
           </div>
           <div className={styles.header}>
-            <h1 className={styles.title}>{postData.title.toUpperCase()}</h1>
+            <h1 className={styles.title}>{postData.title}</h1>
             <div className={styles.about}>
               <div className={styles.image}>
                 <img src="/images/pp.jpg" />

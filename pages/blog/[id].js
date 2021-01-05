@@ -38,9 +38,6 @@ export default function Post({ postData }) {
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
-          <div className={styles.footer}>
-            <p>AUTHOR: VINÍCIUS GONÇALVES DE OLIVEIRA</p>
-          </div>
         </BlogContainer>
       </div>
     </>

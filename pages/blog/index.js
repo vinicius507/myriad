@@ -1,41 +1,35 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from "framer-motion";
+import Head from "next/head";
+import Link from "next/link";
+import Header from "../../components/headerBlog";
+import Date from "../../components/date";
+import utilStyles from "../../styles/utils.module.css";
+import BlogContainer from "../../components/blogContainer";
+import { getSortedPostsData } from "../../lib/blog";
+import ListPosts from "../../components/listPosts";
 
-export default function Blog() {
-    return (
-        <>
-            <Head>
-                <title>Blog</title>
-                <meta name="description" content="My Personal Blog. Anything tech-related that inpires me." />
-            </Head>
-            <motion.h1 initial="initial" animate="enter" exit="exit" variants={test}>
-                Hey go <Link href="/"><a>Back to home.</a></Link>
-            </motion.h1>
-        </>
-    )
+export default function Blog({ allPostsData }) {
+  return (
+    <>
+      <Head>
+        <title>Blog</title>
+        <meta
+          name="description"
+          content="My Personal Blog. Anything that inpires me."
+        />
+      </Head>
+      <Header />
+      <BlogContainer>
+        <ListPosts title="Blog Posts" allPostsData={allPostsData} />
+      </BlogContainer>
+    </>
+  );
 }
 
-const test = {
-    initial: {
-        x: 50,
-        y: 0,
-        opacity: 0,
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
     },
-    enter: {
-        x: 50,
-        y: 50,
-        opacity: 1,
-        transition: {
-            duration: 1
-        }
-    },
-    exit: {
-        x: 50,
-        y: 0,
-        opacity: 0,
-        transition: {
-            duration: 1
-        }
-    }
+  };
 }

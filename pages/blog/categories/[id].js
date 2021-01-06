@@ -1,14 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "../../../components/headerBlog";
-import Date from "../../../components/date";
-import utilStyles from "../../../styles/utils.module.css";
 import BlogContainer from "../../../components/blogContainer";
 import {
   getAllPostsCategories,
   getSortedCategoryPosts,
 } from "../../../lib/blog";
 import ListPosts from "../../../components/listPosts";
+import PortraitMenu from "../../../components/portraitMenu";
 
 export default function Category({ allPostsData, category }) {
   const title = category.replace("-", " ").replace(/\w\S*/g, (txt) => {
@@ -23,6 +21,7 @@ export default function Category({ allPostsData, category }) {
           content="My Personal Blog. Anything that inpires me."
         />
       </Head>
+      <PortraitMenu />
       <Header />
       <BlogContainer>
         <ListPosts

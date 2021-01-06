@@ -50,3 +50,26 @@
 .lightText {
   color: #999;
 }
+
+.categories a {
+  margin-right: 0.5vmin;
+  color: #666666;
+  font-weight: 700;
+  font-size: small; 
+  background-color: #e8e8e8;
+  padding: 4px 8px;
+  border-radius: 2px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.categories a:hover {
+  text-decoration: none;
+  background-color: #dddddd;
+  color: #444444;
+  transition: 0.5s;
+}

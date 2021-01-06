@@ -6,7 +6,9 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <h1>_{siteTitle}</h1>
+        <Link href="/">
+          <h1>_{siteTitle}</h1>
+        </Link>
         <div className={styles.menu}>
           <Link href="/">
             <a>HOME</a>

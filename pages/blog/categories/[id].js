@@ -11,10 +11,13 @@ import {
 import ListPosts from "../../../components/listPosts";
 
 export default function Category({ allPostsData, category }) {
+  const title = category.replace("-", " ").replace(/\w\S*/g, (txt) => {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
   return (
     <>
       <Head>
-        <title>{category.toUpperCase().replace("-"," ")}</title>
+        <title>{title}</title>
         <meta
           name="description"
           content="My Personal Blog. Anything that inpires me."
@@ -22,7 +25,10 @@ export default function Category({ allPostsData, category }) {
       </Head>
       <Header />
       <BlogContainer>
-        <ListPosts title={category.toUpperCase().replace("-"," ")} allPostsData={allPostsData} />
+        <ListPosts
+          title={title}
+          allPostsData={allPostsData}
+        />
       </BlogContainer>
     </>
   );

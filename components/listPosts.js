@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Date from "./date";
 import styles from "./listPosts.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 export default function ListPosts({ title, allPostsData }) {
   return (
@@ -16,7 +17,7 @@ export default function ListPosts({ title, allPostsData }) {
             <small className={styles.lightText}>
               <Date dateTime={date} />
             </small>
-            <div className={styles.categories}>
+            <div className={utilStyles.categories}>
               {categories.split(",").map((category) => (
                 <Link
                   key={category}

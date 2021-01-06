@@ -3,6 +3,8 @@ import Link from "next/link";
 import LayoutHome from "../components/layoutHome";
 import styles from "../styles/contact.module.css";
 import ContactForm from "../components/contactForm";
+import PortraitMenu from "../components/portraitMenu";
+import { MdClear } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -15,6 +17,7 @@ export default function Contact() {
           content="I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me."
         />
       </Head>
+      <PortraitMenu />
       <LayoutHome contact />
       <motion.div
         className={styles.container}
@@ -26,7 +29,7 @@ export default function Contact() {
       >
         <Link href="/">
           <a className={styles.exit}>
-            <img src="/images/exit.png" alt="close" />
+            <MdClear />
           </a>
         </Link>
         <header className={styles.header}>
@@ -38,13 +41,6 @@ export default function Contact() {
           </p>
         </header>
         <ContactForm />
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>
-              <span>←</span>
-            </a>
-          </Link>
-        </div>
       </motion.div>
     </>
   );

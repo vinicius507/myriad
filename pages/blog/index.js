@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "../../components/headerBlog";
-import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
 import BlogContainer from "../../components/blogContainer";
 import { getSortedPostsData } from "../../lib/blog";
 import ListPosts from "../../components/listPosts";
+import PortraitMenu from "../../components/portraitMenu";
 
 export default function Blog({ allPostsData }) {
   return (
@@ -17,6 +15,7 @@ export default function Blog({ allPostsData }) {
           content="My Personal Blog. Anything that inpires me."
         />
       </Head>
+      <PortraitMenu />
       <Header />
       <BlogContainer>
         <ListPosts title="Blog Posts" allPostsData={allPostsData} />

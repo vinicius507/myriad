@@ -15,10 +15,16 @@
   -ms-user-select: none;
 }
 
-.content h1 {
+.content span {
   font-size: 3.8rem;
+  font-weight: 700;
   color: #222222;
   margin: 0;
+}
+
+.content a:hover {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .menu {
@@ -32,9 +38,8 @@
 
 .menu a {
   color: #666666;
-  padding: 0.5vmin 0;
-  margin-right: 2vmin;
-  font-size: 1.75vmin;
+  padding: 4px 0;
+  margin-right: 16px;
   transition: all 0.5s ease-in-out;
 }
 

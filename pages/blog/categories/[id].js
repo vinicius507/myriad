@@ -24,10 +24,7 @@ export default function Category({ allPostsData, category }) {
       <PortraitMenu />
       <Header />
       <BlogContainer>
-        <ListPosts
-          title={title}
-          allPostsData={allPostsData}
-        />
+        <ListPosts title={title} allPostsData={allPostsData} />
       </BlogContainer>
     </>
   );

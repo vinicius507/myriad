@@ -23,10 +23,17 @@ export default function Post({ postData, prev, next }) {
             <h1 className={styles.title}>{postData.title}</h1>
             <div className={styles.about}>
               <div className={styles.image}>
-                <img src="/images/pp.jpg" />
+                <Link href="/about">
+                  <a>
+                    <img src="/images/pp.jpg" />
+                  </a>
+                </Link>
               </div>{" "}
-              <span>
-                by Vinícius Gonçalves de Oliveira ·{" "}
+              <span>by{" "} 
+                <Link href="/about">
+                  <a>Vinícius Gonçalves de Oliveira</a>
+                </Link>
+                {" | "}
                 <Date dateTime={postData.date} />
               </span>
             </div>

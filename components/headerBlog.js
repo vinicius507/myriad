@@ -7,7 +7,9 @@ export default function Header() {
     <div className={styles.header}>
       <div className={styles.content}>
         <Link href="/">
-          <h1>_{siteTitle}</h1>
+          <a>
+            <span>_{siteTitle}</span>
+          </a>
         </Link>
         <div className={styles.menu}>
           <Link href="/">

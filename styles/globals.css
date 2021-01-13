@@ -153,6 +153,13 @@ img {
   bottom: 1vmin;
 }
 
+blockquote {
+  border-left: 4px solid #cccccc;
+  background-color: #eeeeee;
+  font-style: italic;
+  padding: 8px 16px;
+}
+
 @media all and (orientation: portrait) {
   .hljs {
     margin: 0 -4vmin;

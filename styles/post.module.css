@@ -7,6 +7,8 @@
   margin: 0;
   font-family: "Faustina", serif;
   font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2vmin;
 }
 
 .about {
@@ -25,9 +27,13 @@
 }
 
 .about span {
-  margin-left: 28px;
+  margin-left: 32px;
   font-size: smaller;
   color: #222222;
+}
+
+.about a:hover {
+  text-decoration: none;
 }
 
 .content {

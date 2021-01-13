@@ -51,13 +51,19 @@
   color: #999;
 }
 
+.categories {
+  margin-bottom: -4px;
+}
+
 .categories a {
-  margin-right: 0.5vmin;
-  color: #666666;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 4px 8px;
   font-weight: 700;
   font-size: small; 
   background-color: #e8e8e8;
-  padding: 4px 8px;
+  color: #666666;
   border-radius: 2px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

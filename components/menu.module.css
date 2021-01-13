@@ -101,20 +101,21 @@
   margin-top: 12px;
 }
 
-.socials a {
-  cursor: pointer;
+.socialIcon {
+  margin: 0 8px;
+  width: 36px;
+  height: 36px;
+  color: #222222;
   transition: all 0.5s;
 }
 
-.socials a:hover {
-  opacity: 0.8;
-  transition: 0.5s;
+.socials a {
+  cursor: pointer;
 }
 
-.socials img {
-  width: 32px;
-  height: auto;
-  margin: 0 8px;
+.socials a:hover > .socialIcon {
+  color: #111111;
+  transition: 0.5s;
 }
 
 .backToHome {

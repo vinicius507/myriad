@@ -31,7 +31,7 @@ export default function Post({ postData, prev, next }) {
               </div>{" "}
               <span>by{" "} 
                 <Link href="/about">
-                  <a>Vinícius Gonçalves de Oliveira</a>
+                  <a>Vinícius Gonçalves</a>
                 </Link>
                 {" | "}
                 <Date dateTime={postData.date} />

@@ -1,5 +1,6 @@
 import styles from "./menu.module.css";
 import Link from "next/link";
+import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
 import { siteTitle } from "./layoutHome";
 import { motion } from "framer-motion";
 
@@ -88,10 +89,10 @@ const SocialDiv = () => {
       layoutId="socials"
     >
       <a href="https://github.com/vinicius507">
-        <img src="/images/GitHub.png" alt="Github" />
+        <AiFillGithub className={styles.socialIcon} alt="Github" />
       </a>
       <a>
-        <img src="images/Twitter.png" alt="Twitter" />
+        <AiFillTwitterCircle className={styles.socialIcon} alt="Twitter" />
       </a>
     </motion.div>
   );

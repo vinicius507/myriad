@@ -16,20 +16,23 @@ export default function Content() {
 			</Heading>
 			<Text sx={styles.content}>
 				Developer based in João Pessoa, Brazil. Currently cadet at École
-				42. Looking for oportunities.
+				42. Looking for opportunities.
 			</Text>
 			<Stack direction="row" spacing="4" sx={styles.socials}>
 				<SocialItem
 					Icon={FaGithub}
 					to="https://github.com/vinicius507"
+					label="Github"
 				/>
 				<SocialItem
 					Icon={FaInstagram}
 					to="https://instagram.com/viniciusgpo"
+					label="Instagram"
 				/>
 				<SocialItem
 					Icon={FaLinkedin}
 					to="https://www.linkedin.com/in/vinicius-gon%C3%A7alves-d-518756137/"
+					label="LinkedIn"
 				/>
 			</Stack>
 		</>

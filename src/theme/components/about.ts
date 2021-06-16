@@ -9,7 +9,11 @@ const About = {
 		'socialIcon',
 	],
 	baseStyle: {
-		about: {},
+		about: {
+			px: [8, 8, 16],
+			pt: [8, 8, 12],
+			pb: [8, 8, 12],
+		},
 		title: {},
 		subtitle: {
 			fontSize: '2xl',

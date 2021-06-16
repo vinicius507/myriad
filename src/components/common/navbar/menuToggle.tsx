@@ -1,4 +1,4 @@
-import { Box, useStyles } from '@chakra-ui/react'
+import { VisuallyHidden, Box, useStyles, Button } from '@chakra-ui/react'
 import { IoMdMenu, IoMdClose } from 'react-icons/io'
 
 export default function MenuToggle({
@@ -10,7 +10,10 @@ export default function MenuToggle({
 }) {
 	const styles = useStyles()
 	return (
-		<Box sx={styles.menuToggle} onClick={toggle}>
+		<Box as={Button} sx={styles.menuToggle} onClick={toggle}>
+			<VisuallyHidden>
+				{isOpen ? 'Close Menu' : 'Open Menu'}
+			</VisuallyHidden>
 			{isOpen ? <IoMdClose /> : <IoMdMenu />}
 		</Box>
 	)

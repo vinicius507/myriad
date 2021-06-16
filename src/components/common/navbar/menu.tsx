@@ -1,7 +1,13 @@
 import { Box, Stack, useStyles } from '@chakra-ui/react'
 import MenuItem from './menuItem'
 
-export default function Menu({ isOpen }: { isOpen: boolean }) {
+export default function Menu({
+	isOpen,
+	toggle,
+}: {
+	isOpen: boolean
+	toggle: () => void
+}) {
 	const styles = useStyles()
 
 	return (
@@ -15,8 +21,10 @@ export default function Menu({ isOpen }: { isOpen: boolean }) {
 				spacing={4}
 				pt={[4, 4, 0, 0]}
 			>
-				<MenuItem>home</MenuItem>
-				<MenuItem to='/blog'>blog</MenuItem>
+				<MenuItem toggle={toggle}>home</MenuItem>
+				<MenuItem to="/blog" toggle={toggle}>
+					blog
+				</MenuItem>
 			</Stack>
 		</Box>
 	)

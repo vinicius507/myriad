@@ -5,12 +5,13 @@ import { Text, useStyles } from '@chakra-ui/react'
 export default function MenuItem({
 	children,
 	to = '/',
-}: React.PropsWithChildren<{ to?: string }>) {
+	toggle,
+}: React.PropsWithChildren<{ to?: string; toggle: () => void }>) {
 	const styles = useStyles()
 
 	return (
-		<Link sx={styles.menuItem} href={to}>
-			<Text display='block'>{children}</Text>
+		<Link sx={styles.menuItem} href={to} onClick={toggle}>
+			<Text display="block">{children}</Text>
 		</Link>
 	)
 }

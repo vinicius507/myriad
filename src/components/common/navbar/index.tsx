@@ -17,7 +17,7 @@ export default function NavBar() {
 			<NavBarContainer>
 				<Logo w="100px" />
 				<MenuToggle toggle={toggle} isOpen={isOpen} />
-				<Menu isOpen={isOpen} />
+				<Menu isOpen={isOpen} toggle={toggle} />
 			</NavBarContainer>
 			<DrawerOverlay isOpen={isOpen} toggle={toggle} />
 		</StylesProvider>

@@ -32,7 +32,9 @@ const NavBar = {
 		},
 		menuToggle: {
 			display: { base: 'block', md: 'none' },
-			fontSize: 'lg',
+			fontSize: '2xl',
+			rounded: '0',
+			bg: 'none',
 			_hover: {
 				cursor: 'pointer',
 			},

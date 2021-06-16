@@ -1,5 +1,5 @@
 import { Box, Stack, useStyles } from '@chakra-ui/react'
-import MenuItem from '@components/menuItem'
+import MenuItem from './menuItem'
 
 export default function Menu({ isOpen }: { isOpen: boolean }) {
 	const styles = useStyles()

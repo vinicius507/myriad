@@ -1,8 +1,9 @@
 import { useMultiStyleConfig, StylesProvider } from '@chakra-ui/react'
-import Logo from '@components/logo'
-import MenuToggle from '@components/menuToggle'
-import Menu from '@components/menu'
-import NavBarContainer from '@components/navbarContainter'
+import Logo from './logo'
+import MenuToggle from './menuToggle'
+import Menu from './menu'
+import NavBarContainer from './navbarContainter'
+import DrawerOverlay from './drawerOverlay'
 import { useState } from 'react'
 
 export default function NavBar() {
@@ -14,10 +15,11 @@ export default function NavBar() {
 	return (
 		<StylesProvider value={styles}>
 			<NavBarContainer>
-				<Logo w='100px' />
+				<Logo w="100px" />
 				<MenuToggle toggle={toggle} isOpen={isOpen} />
 				<Menu isOpen={isOpen} />
 			</NavBarContainer>
+			<DrawerOverlay isOpen={isOpen} toggle={toggle} />
 		</StylesProvider>
 	)
 }

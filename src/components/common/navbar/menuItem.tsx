@@ -1,5 +1,5 @@
 import React from 'react'
-import { NextChakraLink as Link } from '@components/common/NextChakraLink'
+import { Link } from '@components/common'
 import { Text, useStyles } from '@chakra-ui/react'
 
 export default function MenuItem({

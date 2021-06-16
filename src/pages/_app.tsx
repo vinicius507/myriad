@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import NavBar from '@components/navbar'
+import { NavBar } from '@components/common'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import theme from '../theme'

@@ -1,5 +1,5 @@
 import { useStyles } from '@chakra-ui/react'
-import { NextChakraLink as Link } from '@components/common/NextChakraLink'
+import { Link } from '@components/common'
 import React from 'react'
 
 export default function Logo(props: any) {

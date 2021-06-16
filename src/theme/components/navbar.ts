@@ -15,8 +15,8 @@ const NavBar = {
 			w: '100%',
 			mb: 8,
 			p: 8,
-			bg: ['#0b0b0b', '#0b0b0b', 'transparent'],
-			color: ['white', 'white', '#0b0b0b', '#0b0b0b'],
+			bg: ['dark.50', 'dark.50', 'transparent'],
+			color: ['dark.100', 'dark.100', 'dark.200'],
 		},
 		logo: {
 			fontSize: '3xl',

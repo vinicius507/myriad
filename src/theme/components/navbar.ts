@@ -52,7 +52,7 @@ const NavBar = {
 			w: ['100%', 'unset'],
 			textAlign: 'center',
 			_hover: {
-				color: ['unset', 'tokyonight.250'],
+				color: ['unset', 'tokyonight.300'],
 				bg: ['tokyonight.50', 'unset'],
 				textDecoration: 'none',
 			},

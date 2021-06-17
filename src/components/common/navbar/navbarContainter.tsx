@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, useStyles } from '@chakra-ui/react'
+import { Box, Center, Flex, useStyles } from '@chakra-ui/react'
 
 export default function NavBarContainer({
 	children,
@@ -7,8 +7,12 @@ export default function NavBarContainer({
 }: React.PropsWithChildren<{ props?: React.FC }>) {
 	const styles = useStyles()
 	return (
-		<Flex as='nav' sx={styles.navbar} {...props}>
-			{children}
-		</Flex>
+		<Box sx={styles.navbar}>
+			<Center>
+				<Flex as="nav" sx={styles.navbarFlex} {...props}>
+					{children}
+				</Flex>
+			</Center>
+		</Box>
 	)
 }

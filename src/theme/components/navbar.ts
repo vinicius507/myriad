@@ -1,6 +1,7 @@
 const NavBar = {
 	parts: [
 		'navbar',
+		'navbarFlex',
 		'logo',
 		'menuToggle',
 		'menuContainer',
@@ -12,16 +13,19 @@ const NavBar = {
 		navbar: {
 			position: 'fixed',
 			top: 0,
+			bg: ['tokyonight.150', 'tokyonight.150', 'tokyonight.50'],
+			w: '100%',
+			mb: 0,
+			zIndex: 'tooltip',
+		},
+		navbarFlex: {
 			alignItems: 'center',
 			justifyContent: 'space-between',
 			flexWrap: 'wrap',
+			p: 8,
 			w: '100%',
-			mb: 0,
-			py: 8,
-			px: [8, 8, 8, 128],
-			bg: ['tokyonight.150', 'tokyonight.150', 'tokyonight.50'],
+			maxWidth: '5xl',
 			color: ['tokyonight.200', 'tokyonight.200', 'tokyonight.100'],
-			zIndex: 'tooltip',
 		},
 		logo: {
 			fontSize: '3xl',

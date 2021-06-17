@@ -10,7 +10,7 @@ const Projects = {
 	],
 	baseStyle: {
 		container: {
-			padding: [8, 8, 0],
+			padding: 0,
 			mt: [0, 0, 4],
 		},
 		title: {},

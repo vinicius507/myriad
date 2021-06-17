@@ -32,7 +32,7 @@ export default function Project({
 			</Box>
 			<Text sx={styles.projectDescription}>{description}</Text>
 			{sourceLink && (
-				<Box as="a" href={link}>
+				<Box as="a" href={sourceLink}>
 					<Text sx={styles.projectSourceCode} as="span">
 						<Text sx={styles.projectSourceIcon} as="span">
 							<FaGithub />

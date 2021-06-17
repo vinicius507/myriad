@@ -12,11 +12,13 @@ export default function Project({
 	title,
 	date,
 	link,
+	sourceLink,
 	description,
 }: {
 	title: string
 	date: string
 	link: string
+	sourceLink?: string
 	description: string
 }) {
 	const styles = useStyles()
@@ -29,14 +31,16 @@ export default function Project({
 				{date}
 			</Box>
 			<Text sx={styles.projectDescription}>{description}</Text>
-			<Box as="a" href={link}>
-				<Text sx={styles.projectSourceCode} as="span">
-					<Text sx={styles.projectSourceIcon} as="span">
-						<FaGithub />
+			{sourceLink && (
+				<Box as="a" href={link}>
+					<Text sx={styles.projectSourceCode} as="span">
+						<Text sx={styles.projectSourceIcon} as="span">
+							<FaGithub />
+						</Text>
+						Source
 					</Text>
-					Source
-				</Text>
-			</Box>
+				</Box>
+			)}
 		</LinkBox>
 	)
 }

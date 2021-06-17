@@ -61,11 +61,11 @@ export const getComponents = (styles: any) => {
 			)
 		},
 		ol({ children }: any) {
-			return <OrderedList sx={styles.list}>{children}</OrderedList>
+			return <OrderedList sx={styles.oList}>{children}</OrderedList>
 		},
 		ul({ children }: any) {
 			return (
-				<UnorderedList sx={styles.list} listStyleType="none">
+				<UnorderedList sx={styles.uList} listStyleType="none">
 					{children}
 				</UnorderedList>
 			)

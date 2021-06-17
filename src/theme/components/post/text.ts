@@ -1,5 +1,5 @@
 const text = {
-	py: 2,
+	mb: 2,
 }
 
 export default text

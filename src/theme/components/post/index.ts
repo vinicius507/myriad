@@ -7,6 +7,7 @@ import { oListItem, uListItem } from './listItem'
 import pre from './pre'
 import title from './title'
 import text from './text'
+import table from './table'
 
 const Post = {
 	parts: [
@@ -21,6 +22,7 @@ const Post = {
 		'oListItem',
 		'uList',
 		'oList',
+		'table',
 	],
 	baseStyle: {
 		date,
@@ -34,6 +36,7 @@ const Post = {
 		code,
 		codeBlock,
 		text,
+		table,
 	},
 }
 

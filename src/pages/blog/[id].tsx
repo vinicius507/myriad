@@ -1,14 +1,23 @@
+import { Heading, StylesProvider, useMultiStyleConfig } from '@chakra-ui/react'
+import { Container, Datetime } from '@components/common'
+import Markdown from '@components/markdown'
 import { getAllPostIds, getPostData } from 'lib/posts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 export default function Post({ postData }: { postData: any }) {
+	const styles = useMultiStyleConfig('Post', {})
+
 	return (
-		<>
-			<h1>{postData.title}</h1>
-			{postData.id}
-			<br />
-			{postData.date}
-		</>
+		<Container>
+			<Heading sx={styles.title}>{postData.title}</Heading>
+			<StylesProvider value={styles}>
+				<Datetime
+					datestring={postData.date}
+					formatstring="MMMM Do, yyyy"
+				/>
+				<Markdown>{postData.content}</Markdown>
+			</StylesProvider>
+		</Container>
 	)
 }
 

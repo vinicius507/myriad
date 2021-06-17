@@ -22,9 +22,11 @@ export function getPostData(id: string) {
 	const fileContents = fs.readFileSync(fullPath, 'utf8')
 
 	const matterResult = matter(fileContents)
+	const content = matterResult.content
 
 	return {
 		id,
+		content,
 		...matterResult.data,
 	}
 }

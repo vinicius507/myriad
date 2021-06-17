@@ -1,10 +1,11 @@
 const Container = {
 	baseStyle: {
+		display: 'block',
 		mt: '109px',
-		w: ['100%', '100%', '50%'],
-		mx: ['0', '0', 'auto'],
-		px: [8, 8, 0],
-		py: [8, 8, 0],
+		minWidth: ['100%', '100%', '80%', '60%', '50%'],
+		mx: 0,
+		px: 8,
+		py: 8,
 	},
 }
 

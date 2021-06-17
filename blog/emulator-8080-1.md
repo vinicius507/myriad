@@ -20,4 +20,3 @@ And it just clicked on me.
 The first thing I did? Googling "how to build an emulator" and, in the first few results, there was a website called [emulator101](emulator101.com). And that's how this project begun.  
 
 Right now you can check the [GitHub repository](https://github.com/vinicius507/invaders-8080) and accompany me in this new journey.
-

@@ -19,7 +19,7 @@ const NavBar = {
 			mb: 0,
 			py: 8,
 			px: [8, 8, 8, 128],
-			bg: ['tokyonight.150', 'tokyonight.150', 'transparent'],
+			bg: ['tokyonight.150', 'tokyonight.150', 'tokyonight.50'],
 			color: ['tokyonight.200', 'tokyonight.200', 'tokyonight.100'],
 			zIndex: 'tooltip',
 		},
@@ -37,6 +37,7 @@ const NavBar = {
 			bg: 'none',
 			_hover: {
 				cursor: 'pointer',
+				bg: 'tokyonight.50',
 			},
 		},
 		menuContainer: {

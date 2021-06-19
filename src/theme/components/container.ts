@@ -10,7 +10,7 @@ const Container = {
 	variants: {
 		Post: {
 			maxWidth: '3xl',
-			bg: 'tokyonight.150',
+			bg: ['none', 'none', 'tokyonight.150'],
 			rounded: 'md',
 		},
 	},

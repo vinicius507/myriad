@@ -6,14 +6,14 @@ My personal website.
 Todo
 ---
 
-- [ ] Comments with utterances by Github
-- [ ] Categories and Tags in posts
-- [ ] Blog page
+- [X] Blog page
 - [ ] Footer
-- [ ] Author section in post
-- [ ] SEO
-- [ ] 404 page
-- [ ] Refactor
 - [ ] Chakra types
+- [ ] Refactor
+- [ ] Author section in post
 - [ ] Sidebar in posts ?
+- [ ] Categories and Tags in posts
 - [ ] Projects listed with `getStaticProps`, data processed from json or markdown
+- [ ] 404 page
+- [ ] Comments with utterances by Github
+- [ ] SEO

@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter, { GrayMatterFile } from 'gray-matter'
-import { PostType } from 'interfaces/post'
+import { PostType } from 'interfaces'
 
 const postsDirectory = path.join(process.cwd(), 'blog')
 

@@ -1,7 +1,7 @@
 import { Heading, StylesProvider, useMultiStyleConfig } from '@chakra-ui/react'
 import { Container, Datetime } from '@components/common'
 import Markdown from '@components/markdown'
-import { PostType } from 'interfaces/post'
+import { PostType } from 'interfaces'
 import { getAllPostIds, getPostData } from 'lib/posts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 

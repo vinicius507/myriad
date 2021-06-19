@@ -1,5 +1,5 @@
 import { Heading, Stack, useStyles } from '@chakra-ui/react'
-import { PostType } from 'interfaces/post'
+import { PostType } from 'interfaces'
 import Post from './postWidget'
 
 export default function BlogPosts({

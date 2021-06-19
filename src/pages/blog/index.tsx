@@ -2,7 +2,7 @@ import { useMultiStyleConfig, StylesProvider } from '@chakra-ui/react'
 import BlogPosts from '@components/blog'
 import { Container } from '@components/common'
 import { getSortedPosts } from '@lib/posts'
-import { PostType } from 'interfaces/post'
+import { PostType } from 'interfaces'
 import { GetStaticProps } from 'next'
 
 export default function Blog({

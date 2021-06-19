@@ -3,9 +3,16 @@ const Container = {
 		display: 'block',
 		mt: '109px',
 		width: '100%',
-		maxWidth: '3xl',
+		maxWidth: '5xl',
 		mx: 0,
 		p: 8,
+	},
+	variants: {
+		Post: {
+			maxWidth: '3xl',
+			bg: 'tokyonight.150',
+			rounded: 'md',
+		},
 	},
 }
 

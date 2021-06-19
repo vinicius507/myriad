@@ -12,13 +12,17 @@ import {
 	Td,
 	Tfoot,
 	TableCaption,
+	RecursiveCSSObject,
+	CSSWithMultiValues,
 } from '@chakra-ui/react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import tokyonight from './tokyonight'
 import { Link } from '@components/common'
 import Pre from '@components/markdown/pre'
 
-export const getComponents = (styles: any) => {
+export const getComponents = (
+	styles: Record<string, RecursiveCSSObject<CSSWithMultiValues>>
+) => {
 	return {
 		table({ children }: any) {
 			return <Table sx={styles.table}>{children}</Table>

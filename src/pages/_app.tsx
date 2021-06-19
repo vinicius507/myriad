@@ -1,5 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { NavBar } from '@components/common'
+import { NavBar, Footer } from '@components/common'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import theme from '../theme'
@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<ChakraProvider theme={theme}>
 			<NavBar />
 			<Component {...pageProps} />
+			<Footer />
 		</ChakraProvider>
 	)
 }

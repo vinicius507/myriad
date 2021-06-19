@@ -6,7 +6,7 @@ const colors = {
 		200: '#a9b1d6', // fg_dark
 		250: '#ff9e64', // links
 		300: '#73daca', // highlights
-		350: '',
+		350: '#1a1b26', // bg_dark_hover
 		400: '',
 		450: '',
 		500: '',

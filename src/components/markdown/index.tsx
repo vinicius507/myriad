@@ -7,6 +7,7 @@ import { useStyles } from '@chakra-ui/react'
 export default function Markdown({ children }: { children: string }) {
 	const styles = useStyles()
 	const components = getComponents(styles)
+
 	return (
 		<ReactMarkdown components={components} remarkPlugins={[[gfm, {}]]}>
 			{children}

@@ -1,20 +1,15 @@
-const Projects = {
+const Blog = {
 	parts: [
-		'container',
 		'title',
-		'projectBox',
-		'projectTitle',
-		'projectDate',
-		'projectDescription',
-		'projectSourceCode',
+		'blogBox',
+		'blogTitle',
+		'blogDate',
+		'blogDescription',
+		'blogSourceCode',
 	],
 	baseStyle: {
-		container: {
-			padding: 0,
-			mt: [0, 0, 4],
-		},
 		title: {},
-		projectBox: {
+		blogBox: {
 			p: 8,
 			rounded: 'md',
 			bg: 'tokyonight.150',
@@ -24,16 +19,16 @@ const Projects = {
 				transition: '0.2s',
 			},
 		},
-		projectTitle: {
+		blogTitle: {
 			fontSize: '2xl',
 		},
-		projectDate: {
+		blogDate: {
 			fontSize: 'md',
 			fontStyle: 'italic',
 			color: 'tokyonight.300',
 		},
-		projectDescription: {},
-		projectSourceCode: {
+		blogDescription: {},
+		blogSourceCode: {
 			display: 'inline-flex',
 			alignItems: 'center',
 			bg: 'tokyonight.100',
@@ -46,10 +41,10 @@ const Projects = {
 				bg: 'tokyonight.300',
 			},
 		},
-		projectSourceIcon: {
+		blogSourceIcon: {
 			pr: '8px',
 		},
 	},
 }
 
-export default Projects
+export default Blog

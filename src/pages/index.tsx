@@ -1,14 +1,23 @@
 import About from '@components/about'
 import Projects from '@components/projects'
-import { Container } from '@components/common'
+import { Container, PostsList } from '@components/common'
+import { Heading, useStyleConfig } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { getLatestPosts } from '@lib/posts'
+import { PostType } from 'interfaces'
 
-export default function Home() {
+type Props = { latestPosts: Array<Omit<PostType, 'content' | 'tags'>> }
+
+export default function Home({ latestPosts }: Props) {
+	const headingStyle = useStyleConfig('HomeHeading', {})
+
 	return (
 		<>
 			<About />
 			<Container>
+				<Heading sx={headingStyle}>Latest Posts</Heading>
+				<PostsList posts={latestPosts} />
+				<Heading sx={headingStyle}>Projects</Heading>
 				<Projects />
 			</Container>
 		</>
@@ -16,11 +25,11 @@ export default function Home() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-	const allPostsData = getLatestPosts()
+	const latestPosts = getLatestPosts()
 
 	return {
 		props: {
-			allPostsData,
+			latestPosts,
 		},
 	}
 }

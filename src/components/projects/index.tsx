@@ -1,9 +1,4 @@
-import {
-	Heading,
-	Stack,
-	StylesProvider,
-	useMultiStyleConfig,
-} from '@chakra-ui/react'
+import { Stack, StylesProvider, useMultiStyleConfig } from '@chakra-ui/react'
 import Project from './project'
 
 export default function Projects() {
@@ -11,7 +6,6 @@ export default function Projects() {
 
 	return (
 		<Stack sx={styles.container}>
-			<Heading sx={styles.title}>Projects</Heading>
 			<StylesProvider value={styles}>
 				<Project
 					title="Space Invaders Emulator"

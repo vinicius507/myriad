@@ -17,7 +17,7 @@ export default function Post({ title, date, link }: Props) {
 
 	return (
 		<LinkBox sx={styles.blogBox} as="article">
-			<HStack>
+			<HStack spacing={4}>
 				<Datetime datestring={date} formatstring="MMM dd" />
 				<LinkOverlay href={link}>
 					<Heading sx={styles.blogTitle}>{title}</Heading>

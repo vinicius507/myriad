@@ -31,7 +31,7 @@ const Header = {
 			mb: 2,
 		},
 		subtitle: {
-			fontSize: '2xl',
+			fontSize: ['xl', 'xl', '2xl'],
 			color: 'tokyonight.200',
 			fontWeight: '500',
 		},

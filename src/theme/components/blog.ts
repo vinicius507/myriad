@@ -1,12 +1,5 @@
 const Blog = {
-	parts: [
-		'year',
-		'blogBox',
-		'blogTitle',
-		'blogDate',
-		'blogDescription',
-		'blogSourceCode',
-	],
+	parts: ['year', 'blogBox', 'blogTitle', 'blogDate'],
 	baseStyle: {
 		year: {
 			mx: 8,
@@ -26,27 +19,10 @@ const Blog = {
 		date: {
 			fontSize: 'md',
 			color: 'tokyonight.300',
-			mr: 4,
+			whiteSpace: 'nowrap',
 		},
 		blogTitle: {
 			fontSize: 'xl',
-		},
-		blogDescription: {},
-		blogSourceCode: {
-			display: 'inline-flex',
-			alignItems: 'center',
-			bg: 'tokyonight.100',
-			color: 'tokyonight.50',
-			mt: 2,
-			px: 2,
-			py: 1,
-			borderRadius: '3px',
-			_hover: {
-				bg: 'tokyonight.300',
-			},
-		},
-		blogSourceIcon: {
-			pr: '8px',
 		},
 	},
 }

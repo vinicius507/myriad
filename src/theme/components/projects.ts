@@ -15,7 +15,7 @@ const Projects = {
 		},
 		title: {},
 		projectBox: {
-			p: 8,
+			p: [4, 4, 8],
 			rounded: 'md',
 			bg: 'tokyonight.150',
 			transition: '0.2s background',

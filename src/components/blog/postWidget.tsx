@@ -1,37 +1,28 @@
 import {
-	Box,
 	Heading,
-	Text,
+	HStack,
 	LinkBox,
 	LinkOverlay,
 	useStyles,
 } from '@chakra-ui/react'
-import removeMd from 'remove-markdown'
+import { Datetime } from '@components/common'
 
-export default function Post({
-	title,
-	date,
-	link,
-	content,
-}: {
+type Props = {
 	title: string
 	date: string
 	link: string
-	content: string
-}) {
+}
+export default function Post({ title, date, link }: Props) {
 	const styles = useStyles()
 
 	return (
 		<LinkBox sx={styles.blogBox} as="article">
-			<LinkOverlay href={link}>
-				<Heading sx={styles.blogTitle}>{title}</Heading>
-			</LinkOverlay>
-			<Box as="time" sx={styles.blogDate} dateTime="2021-01-12">
-				{date}
-			</Box>
-			<Text sx={styles.blogDescription} noOfLines={2}>
-				{removeMd(content)}
-			</Text>
+			<HStack>
+				<Datetime datestring={date} formatstring="MMM dd" />
+				<LinkOverlay href={link}>
+					<Heading sx={styles.blogTitle}>{title}</Heading>
+				</LinkOverlay>
+			</HStack>
 		</LinkBox>
 	)
 }

@@ -10,23 +10,31 @@ const About = {
 	],
 	baseStyle: {
 		about: {
-			px: [0, 0, 16],
-			py: 4,
+			width: '100%',
+			maxW: '4xl',
+			px: 8,
 		},
 		title: {},
 		subtitle: {
 			fontSize: '2xl',
 		},
+		content: {
+			fontSize: 'lg',
+			color: 'tokyonight.200',
+		},
 		name: {
 			color: 'tokyonight.300',
 		},
 		picture: {
-			width: 32,
-			height: 32,
-			borderRadius: 16,
+			minWidth: '220px',
+			width: '220px',
+			height: '220px',
+			border: '4px solid',
+			borderColor: 'tokyonight.50',
+			position: 'relative',
 		},
 		socials: {
-			mt: 8,
+			mt: 4,
 			fontSize: 32,
 		},
 		socialIcon: {

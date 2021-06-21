@@ -1,6 +1,6 @@
 const pre = {
 	rounded: [0, 0, 'md'],
-	bg: ['tokyonight.150', 'tokyonight.150', 'tokyonight.350'],
+	bg: 'tokyonight.150',
 	px: 8,
 	py: 4,
 	mb: 2,

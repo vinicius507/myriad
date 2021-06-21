@@ -1,4 +1,4 @@
-import { Heading, Text, Stack, useStyles } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, useStyles } from '@chakra-ui/react'
 import SocialItem from './socialItem'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
@@ -6,17 +6,17 @@ export default function Content() {
 	const styles = useStyles()
 
 	return (
-		<>
-			<Heading sx={styles.title}>Welcome</Heading>
-			<Heading sx={styles.subtitle}>
-				I&apos;m{' '}
+		<Box>
+			<Heading sx={styles.title}>
+				Welcome! I&apos;m{' '}
 				<Text as="span" sx={styles.name}>
-					Vinícius,
+					Vinícius
 				</Text>
+				,
 			</Heading>
-			<Text sx={styles.content}>
-				Developer based in João Pessoa, Brazil. Currently cadet at École
-				42. Looking for opportunities.
+			<Text sx={styles.description}>
+				I&apos;m a Software Engineer based in João Pessoa, Brazil.
+				Currently cadet at École 42. Looking for opportunities.
 			</Text>
 			<Stack direction="row" spacing="4" sx={styles.socials}>
 				<SocialItem
@@ -35,6 +35,6 @@ export default function Content() {
 					label="LinkedIn"
 				/>
 			</Stack>
-		</>
+		</Box>
 	)
 }

@@ -112,14 +112,12 @@ export const getComponents = (
 		},
 		h2({ children }: any) {
 			return (
-				<>
-					<Heading
-						sx={styles.h2}
-						id={String(children).toLowerCase().replace(/\s/g, '_')}
-					>
-						{children}
-					</Heading>
-				</>
+				<Heading
+					sx={styles.h2}
+					id={String(children).toLowerCase().replace(/\s/g, '_')}
+				>
+					{children}
+				</Heading>
 			)
 		},
 		h3({ children }: any) {

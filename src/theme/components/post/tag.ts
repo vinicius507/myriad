@@ -3,7 +3,7 @@ const Tag = {
 	baseStyle: {
 		tag: {
 			bg: 'tokyonight.100',
-			rounded: 'base',
+			rounded: 'sm',
 			transition: '0.2s background',
 			_hover: {
 				bg: 'tokyonight.300',
@@ -12,7 +12,7 @@ const Tag = {
 		},
 		icon: {},
 		label: {
-			fontSize: 'xs',
+			fontSize: 'md',
 			color: 'tokyonight.50',
 		},
 	},

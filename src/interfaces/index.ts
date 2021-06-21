@@ -1,3 +1,3 @@
-import { PostType } from './post'
+import { PostType, SortedPostsType } from './post'
 
-export type { PostType }
+export type { PostType, SortedPostsType }

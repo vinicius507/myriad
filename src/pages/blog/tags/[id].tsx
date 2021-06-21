@@ -1,29 +1,33 @@
-import { useMultiStyleConfig, StylesProvider } from '@chakra-ui/react'
-import BlogPosts from '@components/blog'
-import { Container } from '@components/common'
+import React from 'react'
+import { Text } from '@chakra-ui/react'
+import PostsList from '@components/blog'
 import { getAllPostTags, getTagPosts } from '@lib/posts'
-import { PostType } from 'interfaces'
+import { SortedPostsType } from 'interfaces'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { capitalize } from 'utils'
 
-export default function TagPosts({
-	allPostsData,
-	tag,
-}: {
-	allPostsData: Array<PostType>
+type Props = {
+	allPostsData: SortedPostsType
 	tag: string
-}) {
-	const styles = useMultiStyleConfig('Blog', {})
+}
+
+export default function TagPosts({ allPostsData, tag }: Props) {
+	let count = 0
+
+	Object.keys(allPostsData).map((year: string) => {
+		count += allPostsData[year].length
+	})
 
 	return (
-		<Container>
-			<StylesProvider value={styles}>
-				<BlogPosts
-					title={`${capitalize(tag)} Posts`}
-					allPostsData={allPostsData}
-				/>
-			</StylesProvider>
-		</Container>
+		<PostsList
+			title={`Posts tagged: ${capitalize(tag)}`}
+			allPostsData={allPostsData}
+		>
+			<Text as="span" color="tokyonight.300">
+				{count}
+			</Text>{' '}
+			found.
+		</PostsList>
 	)
 }
 

@@ -3,6 +3,7 @@ const Footer = {
 	baseStyle: {
 		container: {
 			w: '100%',
+			pb: 4,
 			px: 8,
 		},
 		content: {

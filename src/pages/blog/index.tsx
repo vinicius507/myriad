@@ -1,23 +1,18 @@
-import { useMultiStyleConfig, StylesProvider } from '@chakra-ui/react'
-import BlogPosts from '@components/blog'
-import { Container } from '@components/common'
+import PostsList from '@components/blog'
 import { getSortedPosts } from '@lib/posts'
-import { PostType } from 'interfaces'
+import { SortedPostsType } from 'interfaces'
 import { GetStaticProps } from 'next'
 
-export default function Blog({
-	allPostsData,
-}: {
-	allPostsData: Array<PostType>
-}) {
-	const styles = useMultiStyleConfig('Blog', {})
+type Props = {
+	allPostsData: SortedPostsType
+}
 
+export default function Blog({ allPostsData }: Props) {
 	return (
-		<Container>
-			<StylesProvider value={styles}>
-				<BlogPosts title="Blog Posts" allPostsData={allPostsData} />
-			</StylesProvider>
-		</Container>
+		<PostsList title="Blog Posts" allPostsData={allPostsData}>
+			Posts, tutorials, snippets, musings, notes, and everything else. The
+			archive of everything I&apos;ve written.
+		</PostsList>
 	)
 }
 

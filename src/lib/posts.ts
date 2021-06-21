@@ -2,7 +2,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter, { GrayMatterFile } from 'gray-matter'
-import { PostType } from 'interfaces'
+import { PostType, SortedPostsType } from 'interfaces'
+import _ from 'lodash'
 
 const postsDirectory = path.join(process.cwd(), 'blog')
 
@@ -25,16 +26,18 @@ export function getPostData(id: string): PostType {
 	const matterResult = matter(fileContents) as {
 		data: { title: string; date: string }
 	} & GrayMatterFile<string>
+	const tags = String(matterResult.data.tags).split(' ')
 	const content = matterResult.content
 
 	return {
 		id,
 		content,
 		...matterResult.data,
+		tags,
 	}
 }
 
-export function getSortedPosts(): Array<PostType> {
+export function getSortedPosts(): SortedPostsType {
 	const filenames = fs.readdirSync(postsDirectory)
 	const allPostsData = filenames.map((filename) => {
 		const id = filename.replace(/\.md$/, '')
@@ -51,18 +54,34 @@ export function getSortedPosts(): Array<PostType> {
 		}
 	}) as Array<PostType>
 
-	return allPostsData.sort(({ date: a }: any, { date: b }: any) => {
-		if (a < b) {
-			return 1
-		} else if (a > b) {
-			return -1
-		} else {
-			return 0
+	const sortedPosts = allPostsData.sort(
+		({ date: a }: any, { date: b }: any) => {
+			if (a < b) {
+				return 1
+			} else if (a > b) {
+				return -1
+			} else {
+				return 0
+			}
 		}
+	)
+
+	var byYear: SortedPostsType = {}
+
+	_.each(sortedPosts, (post) => {
+		const year = post.date.substring(0, 4)
+
+		if (typeof byYear[year] === 'undefined') {
+			byYear[year] = []
+		}
+
+		byYear[year].push(post)
 	})
+
+	return byYear
 }
 
-export function getTagPosts(tag: string): Array<PostType> {
+export function getTagPosts(tag: string): SortedPostsType {
 	const filenames = fs.readdirSync(postsDirectory)
 	const allPostsData = filenames.map((filename) => {
 		const id = filename.replace(/\.md$/, '')
@@ -83,15 +102,31 @@ export function getTagPosts(tag: string): Array<PostType> {
 		String(post.tags).includes(tag)
 	)
 
-	return tagPostsData.sort(({ date: a }: any, { date: b }: any) => {
-		if (a < b) {
-			return 1
-		} else if (a > b) {
-			return -1
-		} else {
-			return 0
+	let sortedPosts = tagPostsData.sort(
+		({ date: a }: any, { date: b }: any) => {
+			if (a < b) {
+				return 1
+			} else if (a > b) {
+				return -1
+			} else {
+				return 0
+			}
 		}
+	)
+
+	var byYear: SortedPostsType = {}
+
+	_.each(sortedPosts, (post) => {
+		const year = post.date.substring(0, 4)
+
+		if (typeof byYear[year] === 'undefined') {
+			byYear[year] = []
+		}
+
+		byYear[year].push(post)
 	})
+
+	return byYear
 }
 
 export function getAllPostTags(): Array<{ params: { id: string } }> {
@@ -116,4 +151,34 @@ export function getAllPostTags(): Array<{ params: { id: string } }> {
 			},
 		}
 	})
+}
+
+export function getLatestPosts(): Array<PostType> {
+	const filenames = fs.readdirSync(postsDirectory)
+	const allPostsData = filenames.map((filename) => {
+		const id = filename.replace(/\.md$/, '')
+
+		const fullPath = path.join(postsDirectory, filename)
+		const fileContents = fs.readFileSync(fullPath, 'utf8')
+		const matterResult = matter(fileContents)
+		const content = matterResult.content
+
+		return {
+			id,
+			content,
+			...matterResult.data,
+		}
+	}) as Array<PostType>
+
+	return allPostsData
+		.sort(({ date: a }: any, { date: b }: any) => {
+			if (a < b) {
+				return 1
+			} else if (a > b) {
+				return -1
+			} else {
+				return 0
+			}
+		})
+		.slice(0, 5)
 }

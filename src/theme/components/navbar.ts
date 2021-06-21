@@ -24,7 +24,7 @@ const NavBar = {
 			flexWrap: 'wrap',
 			p: 8,
 			w: '100%',
-			maxWidth: '5xl',
+			maxWidth: '4xl',
 			color: ['tokyonight.200', 'tokyonight.200', 'tokyonight.100'],
 		},
 		logo: {

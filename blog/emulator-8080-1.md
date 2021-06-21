@@ -1,5 +1,6 @@
 ---
 title: "Starting a Journey on Emulation"
+description: "Emulator of an Intel 8080 for the game Space Invaders."
 date: "2020-01-13" 
 tags: "emulation c project"
 ---

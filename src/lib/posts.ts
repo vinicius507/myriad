@@ -37,7 +37,35 @@ export function getPostData(id: string): PostType {
 	}
 }
 
-export function getSortedPosts(): SortedPostsType {
+export function getSortedPosts(): Array<PostType> {
+	const filenames = fs.readdirSync(postsDirectory)
+	const allPostsData = filenames.map((filename) => {
+		const id = filename.replace(/\.md$/, '')
+
+		const fullPath = path.join(postsDirectory, filename)
+		const fileContents = fs.readFileSync(fullPath, 'utf8')
+		const matterResult = matter(fileContents)
+		const content = matterResult.content
+
+		return {
+			id,
+			content,
+			...matterResult.data,
+		}
+	}) as Array<PostType>
+
+	return allPostsData.sort(({ date: a }: PostType, { date: b }: PostType) => {
+		if (a < b) {
+			return 1
+		} else if (a > b) {
+			return -1
+		} else {
+			return 0
+		}
+	})
+}
+
+export function getYearSortedPosts(): SortedPostsType {
 	const filenames = fs.readdirSync(postsDirectory)
 	const allPostsData = filenames.map((filename) => {
 		const id = filename.replace(/\.md$/, '')
@@ -55,7 +83,7 @@ export function getSortedPosts(): SortedPostsType {
 	}) as Array<PostType>
 
 	const sortedPosts = allPostsData.sort(
-		({ date: a }: any, { date: b }: any) => {
+		({ date: a }: PostType, { date: b }: PostType) => {
 			if (a < b) {
 				return 1
 			} else if (a > b) {
@@ -89,11 +117,9 @@ export function getTagPosts(tag: string): SortedPostsType {
 		const fullPath = path.join(postsDirectory, filename)
 		const fileContents = fs.readFileSync(fullPath, 'utf8')
 		const matterResult = matter(fileContents)
-		const content = matterResult.content
 
 		return {
 			id,
-			content,
 			...matterResult.data,
 		}
 	}) as Array<PostType>

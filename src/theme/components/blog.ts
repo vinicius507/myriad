@@ -1,5 +1,5 @@
 const Blog = {
-	parts: ['year', 'blogBox', 'blogTitle', 'blogDate'],
+	parts: ['year', 'number', 'blogBox', 'blogTitle', 'blogDate'],
 	baseStyle: {
 		year: {
 			mx: 8,
@@ -8,6 +8,9 @@ const Blog = {
 			color: 'tokyonight.250',
 			borderBottom: '2px solid',
 			borderColor: 'tokyonight.200',
+		},
+		number: {
+			color: 'tokyonight.300',
 		},
 		blogBox: {
 			py: 4,

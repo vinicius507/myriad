@@ -1,9 +1,6 @@
 import About from './about'
 import Blog from './blog'
-import { Header } from './common'
-import Container from './container'
-import Footer from './footer'
-import NavBar from './navbar'
+import { Container, Footer, Header, NavBar } from './common'
 import { Post, Tag } from './post'
 import Projects from './projects'
 

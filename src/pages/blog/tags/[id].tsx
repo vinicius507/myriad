@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text } from '@chakra-ui/react'
-import PostsList from '@components/blog'
+import { Text, Heading, useMultiStyleConfig } from '@chakra-ui/react'
+import { Container, PageHeader, PostsList } from '@components/common'
 import { getAllPostTags, getTagPosts } from '@lib/posts'
 import { SortedPostsType } from 'interfaces'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -12,22 +12,35 @@ type Props = {
 }
 
 export default function TagPosts({ allPostsData, tag }: Props) {
-	let count = 0
+	const styles = useMultiStyleConfig('Blog', {})
 
+	let count = 0
 	Object.keys(allPostsData).map((year: string) => {
 		count += allPostsData[year].length
 	})
 
-	return (
-		<PostsList
-			title={`Posts tagged: ${capitalize(tag)}`}
-			allPostsData={allPostsData}
-		>
-			<Text as="span" color="tokyonight.300">
+	const title: string = `Posts tagged: ${capitalize(tag)}`
+	const description = (
+		<>
+			<Text as="span" sx={styles.number}>
 				{count}
 			</Text>{' '}
 			found.
-		</PostsList>
+		</>
+	)
+
+	return (
+		<>
+			<PageHeader title={title}>{description}</PageHeader>
+			<Container>
+				{Object.keys(allPostsData).map((year: string) => (
+					<>
+						<Heading sx={styles.year}>{year}</Heading>
+						<PostsList posts={allPostsData[year]} />
+					</>
+				))}
+			</Container>
+		</>
 	)
 }
 

@@ -9,6 +9,7 @@ import {
 } from './NextChakraLink'
 import PageHeader from './pageHeader'
 import PostHeader from './postHeader'
+import PostsList from './postsList'
 
 export {
 	Container,
@@ -19,5 +20,6 @@ export {
 	NavBar,
 	PageHeader,
 	PostHeader,
+	PostsList,
 }
 export type { LinkProps }

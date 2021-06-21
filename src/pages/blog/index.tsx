@@ -15,7 +15,7 @@ export default function Blog({
 	return (
 		<Container>
 			<StylesProvider value={styles}>
-				<BlogPosts allPostsData={allPostsData} />
+				<BlogPosts title="Blog Posts" allPostsData={allPostsData} />
 			</StylesProvider>
 		</Container>
 	)

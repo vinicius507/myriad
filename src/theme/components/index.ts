@@ -3,8 +3,8 @@ import Blog from './blog'
 import Container from './container'
 import Footer from './footer'
 import NavBar from './navbar'
+import { Post, Tag } from './post'
 import Projects from './projects'
-import Post from './post'
 
 const components = {
 	About,
@@ -14,6 +14,7 @@ const components = {
 	NavBar,
 	Post,
 	Projects,
+	Tag,
 }
 
 export default components

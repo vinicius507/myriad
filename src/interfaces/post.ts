@@ -3,7 +3,6 @@ interface Post {
 	title: string
 	date: string
 	content: string
-	categories?: Array<string>
 	tags?: Array<string>
 }
 

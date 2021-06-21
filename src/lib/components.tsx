@@ -18,7 +18,7 @@ import {
 	UnorderedList,
 } from '@chakra-ui/react'
 import { Link } from '@components/common'
-import Pre from '@components/markdown/pre'
+import { Pre } from '@components/post'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import tokyonight from './tokyonight'
 

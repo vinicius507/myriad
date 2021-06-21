@@ -1,7 +1,7 @@
 ---
 title: "Starting a Journey on Emulation"
 date: "2020-01-13" 
-categories: "emulation,c language,space invaders,intel 8080"
+tags: "emulation c project"
 ---
 
 One day I was looking at my YouTube recommendation feed, like I do most days to kill time, and stumbled upon a [video](https://www.youtube.com/watch?v=N2bXEUSAiTI) of a George Hotz twitch live.

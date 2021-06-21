@@ -61,3 +61,59 @@ export function getSortedPosts(): Array<PostType> {
 		}
 	})
 }
+
+export function getTagPosts(tag: string): Array<PostType> {
+	const filenames = fs.readdirSync(postsDirectory)
+	const allPostsData = filenames.map((filename) => {
+		const id = filename.replace(/\.md$/, '')
+
+		const fullPath = path.join(postsDirectory, filename)
+		const fileContents = fs.readFileSync(fullPath, 'utf8')
+		const matterResult = matter(fileContents)
+		const content = matterResult.content
+
+		return {
+			id,
+			content,
+			...matterResult.data,
+		}
+	}) as Array<PostType>
+
+	const tagPostsData = allPostsData.filter((post) =>
+		String(post.tags).includes(tag)
+	)
+
+	return tagPostsData.sort(({ date: a }: any, { date: b }: any) => {
+		if (a < b) {
+			return 1
+		} else if (a > b) {
+			return -1
+		} else {
+			return 0
+		}
+	})
+}
+
+export function getAllPostTags(): Array<{ params: { id: string } }> {
+	const filenames = fs.readdirSync(postsDirectory)
+	const tags = filenames
+		.map((filename) => {
+			const fullPath = path.join(postsDirectory, filename)
+			const fileContents = fs.readFileSync(fullPath, 'utf8')
+			const matterResult = matter(fileContents)
+
+			const tags = String(matterResult.data.tags).split(' ')
+			return tags
+		})
+		.flat()
+		.filter((value, idx, self) => {
+			return self.indexOf(value) === idx
+		})
+	return tags.map((tag) => {
+		return {
+			params: {
+				id: tag,
+			},
+		}
+	})
+}

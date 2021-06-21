@@ -3,15 +3,17 @@ import { PostType } from 'interfaces'
 import Post from './postWidget'
 
 export default function BlogPosts({
+	title,
 	allPostsData,
 }: {
+	title: string
 	allPostsData: Array<PostType>
 }) {
 	const styles = useStyles()
 
 	return (
 		<Stack direction="column">
-			<Heading sx={styles.title}>Blog Posts</Heading>
+			<Heading sx={styles.title}>{title}</Heading>
 			{allPostsData.map(({ id, content, date, title }: PostType) => (
 				<Post
 					title={title}

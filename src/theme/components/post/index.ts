@@ -7,6 +7,7 @@ import { oList, uList } from './list'
 import { oListItem, uListItem } from './listItem'
 import pre from './pre'
 import table from './table'
+import Tag from './tag'
 import text from './text'
 import title from './title'
 
@@ -47,4 +48,4 @@ const Post = {
 	},
 }
 
-export default Post
+export { Post, Tag }

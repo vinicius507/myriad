@@ -5,8 +5,8 @@ export default function Pre({ children }: React.PropsWithChildren<{}>) {
 	const styles = useStyles()
 
 	return (
-		<Box sx={styles.pre}>
-			<Box sx={styles.codeBlock}>{children}</Box>
+		<Box as="pre" sx={styles.pre}>
+			{children}
 		</Box>
 	)
 }

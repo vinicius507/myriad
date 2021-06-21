@@ -4,6 +4,7 @@ const styles = {
 			bg: 'tokyonight.50',
 			color: 'tokyonight.100',
 		},
+		html: {},
 	},
 }
 

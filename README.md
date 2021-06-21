@@ -7,7 +7,8 @@ Todo
 ---
 
 - [X] Blog page
-- [ ] Footer
+- [X] Footer
+- [X] Code block color
 - [ ] Chakra types
 - [ ] Refactor
 - [ ] Author section in post

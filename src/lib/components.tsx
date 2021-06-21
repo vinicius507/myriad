@@ -1,24 +1,26 @@
 import {
 	Code,
-	Table,
-	Text,
-	OrderedList,
+	CSSWithMultiValues,
+	Divider,
+	Heading,
 	ListItem,
-	UnorderedList,
-	Thead,
-	Tr,
-	Th,
+	OrderedList,
+	RecursiveCSSObject,
+	Table,
+	TableCaption,
 	Tbody,
 	Td,
+	Text,
 	Tfoot,
-	TableCaption,
-	RecursiveCSSObject,
-	CSSWithMultiValues,
+	Th,
+	Thead,
+	Tr,
+	UnorderedList,
 } from '@chakra-ui/react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import tokyonight from './tokyonight'
 import { Link } from '@components/common'
 import Pre from '@components/markdown/pre'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import tokyonight from './tokyonight'
 
 export const getComponents = (
 	styles: Record<string, RecursiveCSSObject<CSSWithMultiValues>>
@@ -81,11 +83,14 @@ export const getComponents = (
 				</ListItem>
 			)
 		},
+		pre({ children }: any) {
+			return <>{children}</>
+		},
 		code({ inline, className, children }: any) {
 			const match = /language-(\w+)/.exec(className || '')
-			return !inline && match ? (
+			return !inline ? (
 				<SyntaxHighlighter
-					language={match[1]}
+					language={match ? match[1] : ''}
 					PreTag={Pre}
 					style={tokyonight}
 				>
@@ -94,6 +99,41 @@ export const getComponents = (
 			) : (
 				<Code sx={styles.code}>{children}</Code>
 			)
+		},
+		h1({ children }: any) {
+			return (
+				<Heading
+					sx={styles.h1}
+					id={String(children).toLowerCase().replace(/\s/g, '_')}
+				>
+					{children}
+				</Heading>
+			)
+		},
+		h2({ children }: any) {
+			return (
+				<>
+					<Heading
+						sx={styles.h2}
+						id={String(children).toLowerCase().replace(/\s/g, '_')}
+					>
+						{children}
+					</Heading>
+				</>
+			)
+		},
+		h3({ children }: any) {
+			return (
+				<Heading
+					sx={styles.h3}
+					id={String(children).toLowerCase().replace(/\s/g, '_')}
+				>
+					{children}
+				</Heading>
+			)
+		},
+		hr() {
+			return <Divider sx={styles.hr} />
 		},
 	}
 }

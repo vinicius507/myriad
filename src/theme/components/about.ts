@@ -11,8 +11,7 @@ const About = {
 	baseStyle: {
 		about: {
 			px: [0, 0, 16],
-			pt: [8, 8, 12],
-			pb: [8, 8, 12],
+			py: 4,
 		},
 		title: {},
 		subtitle: {

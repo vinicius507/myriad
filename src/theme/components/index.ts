@@ -1,6 +1,6 @@
 import About from './about'
 import Blog from './blog'
-import { Container, Footer, Header, NavBar } from './common'
+import { Container, Footer, Header, NavBar, PostsList } from './common'
 import { Post, Tag } from './post'
 import Projects from './projects'
 
@@ -12,6 +12,7 @@ const components = {
 	Header,
 	NavBar,
 	Post,
+	PostsList,
 	Projects,
 	Tag,
 }

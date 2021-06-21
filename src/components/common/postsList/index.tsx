@@ -8,7 +8,7 @@ type Props = {
 }
 
 export default function PostsList({ posts }: Props) {
-	const styles = useMultiStyleConfig('Blog', {})
+	const styles = useMultiStyleConfig('PostsList', {})
 
 	return (
 		<Stack sx={styles.list} direction="column" spacing={0}>

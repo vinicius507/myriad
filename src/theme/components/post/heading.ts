@@ -9,11 +9,19 @@ const _before = {
 
 const h1 = {
 	fontSize: '3xl',
+	borderBottom: '2px solid',
+	borderColor: 'tokyonight.200',
+	color: 'tokyonight.250',
+	mt: 4,
+	mb: 2,
 	_before,
 }
 
 const h2 = {
 	fontSize: '2xl',
+	borderBottom: '2px solid',
+	borderColor: 'tokyonight.200',
+	color: 'tokyonight.300',
 	mt: 4,
 	mb: 2,
 	_before,
@@ -21,6 +29,7 @@ const h2 = {
 
 const h3 = {
 	fontSize: 'xl',
+	color: 'tokyonight.300',
 	mt: 4,
 	mb: 2,
 	_before,

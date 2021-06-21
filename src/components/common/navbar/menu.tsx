@@ -22,6 +22,9 @@ export default function Menu({
 				pt={[4, 4, 0, 0]}
 			>
 				<MenuItem toggle={toggle}>home</MenuItem>
+				<MenuItem to="/about" toggle={toggle}>
+					about
+				</MenuItem>
 				<MenuItem to="/blog" toggle={toggle}>
 					blog
 				</MenuItem>

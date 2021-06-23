@@ -32,7 +32,9 @@ Here's what I use, suggestions are appreciated!
 - CPU: AMD Ryzen 5 3400g
 - Memory: Corsair Vengeance LPX 2666MHz DDR4 8GB 2x
 - Storage: SSD Kingston A400 480GB\*
-- PSU: CoolerMaster MWE 550 80plus Bronze
+- PSU: CoolerMaster MWE 550 80plus Bronze\*
 - Case: Lian Li Lancool 205 Black
 - Monitor: Philips 242V8A
 - Keyboard: Sharkoon Purewriter TKL Black
+
+> \*: to be replaced in a future upgrade.

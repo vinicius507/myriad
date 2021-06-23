@@ -1,4 +1,5 @@
 import {
+	Box,
 	Code,
 	CSSWithMultiValues,
 	Divider,
@@ -132,6 +133,13 @@ export const getComponents = (
 		},
 		hr() {
 			return <Divider sx={styles.hr} />
+		},
+		blockquote({ children }: any) {
+			return (
+				<Box as="blockquote" sx={styles.blockquote}>
+					{children}
+				</Box>
+			)
 		},
 	}
 }

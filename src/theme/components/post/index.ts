@@ -1,3 +1,4 @@
+import blockquote from './blockquote'
 import code from './code'
 import date from './date'
 import { h1, h2, h3 } from './heading'
@@ -13,6 +14,7 @@ import title from './title'
 
 const Post = {
 	parts: [
+		'blockquote',
 		'code',
 		'date',
 		'h1',
@@ -30,6 +32,7 @@ const Post = {
 		'uListItem',
 	],
 	baseStyle: {
+		blockquote,
 		code,
 		date,
 		h1,

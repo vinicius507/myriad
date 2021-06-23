@@ -16,7 +16,7 @@ const NavBar = {
 			bg: ['tokyonight.150', 'tokyonight.150', 'tokyonight.50'],
 			w: '100%',
 			mb: 0,
-			zIndex: 'tooltip',
+			zIndex: 'sticky',
 		},
 		navbarFlex: {
 			alignItems: 'center',

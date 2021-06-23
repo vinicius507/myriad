@@ -1,11 +1,10 @@
 const img = {
 	position: 'relative',
-	minW: 'md',
-	minH: 'md',
+	minW: ['xs', 'md'],
+	minH: ['xs', 'md'],
 	overflow: 'hidden',
 	border: '8px solid',
 	borderColor: 'tokyonight.150',
-	mx: 8,
 	mt: 4,
 	mb: 2,
 }

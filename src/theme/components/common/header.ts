@@ -19,7 +19,6 @@ const Header = {
 			pt: [0, 0, 12],
 			mt: '109px',
 			position: 'relative',
-			zIndex: 'banner',
 		},
 		container: {
 			maxW: '4xl',

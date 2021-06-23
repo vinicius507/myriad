@@ -18,7 +18,7 @@ import {
 	Tr,
 	UnorderedList,
 } from '@chakra-ui/react'
-import { Link } from '@components/common'
+import { Image, Link } from '@components/common'
 import { Pre } from '@components/post'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import tokyonight from './tokyonight'
@@ -140,6 +140,9 @@ export const getComponents = (
 					{children}
 				</Box>
 			)
+		},
+		img({ src, alt, title }: any) {
+			return <Image src={src} alt={alt} title={title} sx={styles.img} />
 		},
 	}
 }

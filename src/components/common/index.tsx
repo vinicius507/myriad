@@ -4,6 +4,10 @@ import Footer from './footer'
 import Header from './header'
 import NavBar from './navbar'
 import {
+	NextChakraImage as Image,
+	NextChakraImageProps as ImageProps,
+} from './NextChakraImage'
+import {
 	NextChakraLink as Link,
 	NextChakraLinkProps as LinkProps,
 } from './NextChakraLink'
@@ -16,10 +20,11 @@ export {
 	Datetime,
 	Footer,
 	Header,
+	Image,
 	Link,
 	NavBar,
 	PageHeader,
 	PostHeader,
 	PostsList,
 }
-export type { LinkProps }
+export type { ImageProps, LinkProps }

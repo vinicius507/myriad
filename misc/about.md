@@ -3,6 +3,8 @@ title: "About Me"
 description: "I'm Vinícius Gonçalves, software engineer, wannabe writer and FOSS enthusiast."
 ---
 
+![Me](/img/me.png)
+
 Hey, I'm Vinícius! I'm a software engineer in João Pessoa, Brazil. This is the
 spot for some of my projects, tutorials, guides, notes and everything I'd like
 to backup from my brain.

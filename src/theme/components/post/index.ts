@@ -3,6 +3,7 @@ import code from './code'
 import date from './date'
 import { h1, h2, h3 } from './heading'
 import hr from './hr'
+import img from './img'
 import link from './link'
 import { oList, uList } from './list'
 import { oListItem, uListItem } from './listItem'
@@ -21,6 +22,7 @@ const Post = {
 		'h2',
 		'h3',
 		'hr',
+		'img',
 		'link',
 		'oList',
 		'oListItem',
@@ -38,6 +40,7 @@ const Post = {
 		h1,
 		h2,
 		h3,
+		img,
 		hr,
 		link,
 		oList,

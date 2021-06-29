@@ -1,7 +1,8 @@
 import { Box, BoxProps } from '@chakra-ui/react'
 import NextImage, { ImageProps } from 'next/image'
 
-export type NextChakraImageProps = Omit<BoxProps, 'as'> & ImageProps
+export type NextChakraImageProps = Omit<BoxProps, 'as'> &
+	Omit<ImageProps, 'src'> & { src: string }
 
 export function NextChakraImage({
 	src,

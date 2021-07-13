@@ -1,2 +1,4 @@
-# myriad-old
-My personal Portfolio/Blog Website
+Myriad
+---
+
+My personal website.

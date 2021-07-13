@@ -1,38 +1,38 @@
 {
   "name": "myriad",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vinicius507/myriad.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vinicius507/myriad/issues"
-  },
-  "homepage": "https://github.com/vinicius507/myriad#readme",
   "dependencies": {
-    "axios": "^0.21.0",
-    "date-fns": "^2.16.1",
-    "framer-motion": "^2.9.4",
-    "fs": "^0.0.1-security",
-    "gray-matter": "^4.0.2",
-    "next": "^10.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "remark": "^13.0.0",
-    "remark-code-extra": "^1.0.1",
-    "remark-highlight.js": "^6.0.0",
-    "remark-html": "^13.0.1"
+    "@chakra-ui/react": "^1.6.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@types/react-syntax-highlighter": "^13.5.0",
+    "date-fns": "^2.22.1",
+    "framer-motion": "^4",
+    "global": "^4.4.0",
+    "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
+    "next": "11.0.0",
+    "next-seo": "^4.26.0",
+    "prettier": "^2.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-markdown": "^6.0.2",
+    "react-syntax-highlighter": "^15.4.3",
+    "react-utterances": "^0.6.4",
+    "remark-gfm": "^1.0.0"
   },
-  "engines": {
-    "yarn": "YARN NO LONGER USED - use npm instead."
+  "devDependencies": {
+    "@types/react": "17.0.11",
+    "eslint": "7.28.0",
+    "eslint-config-next": "11.0.0",
+    "typescript": "4.3.2"
   }
 }

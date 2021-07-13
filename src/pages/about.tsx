@@ -1,6 +1,7 @@
 import { getAbout } from '@lib/misc'
 import { PageHeader, Container } from '@components/common'
 import { Markdown } from '@components/post'
+import { NextSeo } from 'next-seo'
 import { StylesProvider, useMultiStyleConfig } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
 import { PostType } from 'interfaces'
@@ -13,6 +14,11 @@ export default function AboutPage({ aboutData }: Props) {
 	const styles = useMultiStyleConfig('Post', {})
 	return (
 		<>
+			<NextSeo
+				title={aboutData.title}
+				description={aboutData.description}
+				canonical="https://www.myriaddev.me/blog"
+			/>
 			<PageHeader title={aboutData.title}>
 				{aboutData.description}
 			</PageHeader>

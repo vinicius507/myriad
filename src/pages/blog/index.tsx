@@ -1,8 +1,9 @@
-import { Container, PageHeader, PostsList } from '@components/common'
 import { Heading, useMultiStyleConfig } from '@chakra-ui/react'
+import { Container, PageHeader, PostsList } from '@components/common'
 import { getYearSortedPosts } from '@lib/posts'
 import { SortedPostsType } from 'interfaces'
 import { GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
 
 type Props = {
 	allPostsData: SortedPostsType
@@ -17,6 +18,11 @@ export default function Blog({ allPostsData }: Props) {
 
 	return (
 		<>
+			<NextSeo
+				title={title}
+				description={description}
+				canonical="https://www.myriaddev.me/blog"
+			/>
 			<PageHeader title={title}>{description}</PageHeader>
 			<Container>
 				{Object.keys(allPostsData).map((year: string) => (

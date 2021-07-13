@@ -1,6 +1,7 @@
 import { StylesProvider, useMultiStyleConfig } from '@chakra-ui/react'
 import { Container, PostHeader } from '@components/common'
 import { Markdown } from '@components/post'
+import { NextSeo } from 'next-seo'
 import { PostType } from 'interfaces'
 import { getAllPostIds, getPostData } from 'lib/posts'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -10,6 +11,11 @@ export default function Post({ postData }: { postData: PostType }) {
 
 	return (
 		<>
+			<NextSeo
+				title={postData.title}
+				description={postData.description}
+				canonical={`https://www.myriaddev.me/blog/${postData.id}`}
+			/>
 			<PostHeader
 				title={postData.title}
 				description={postData.description}

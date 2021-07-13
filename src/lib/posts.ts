@@ -5,7 +5,7 @@ import matter, { GrayMatterFile } from 'gray-matter'
 import { PostType, SortedPostsType } from 'interfaces'
 import _ from 'lodash'
 
-const postsDirectory = path.join(process.cwd(), 'blog')
+const postsDirectory = path.join(process.cwd(), 'content/blog')
 
 export function getAllPostIds(): Array<{ params: { id: string } }> {
 	const filenames = fs.readdirSync(postsDirectory)

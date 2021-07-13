@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter, { GrayMatterFile } from 'gray-matter'
 
-const miscDirectory = path.join(process.cwd(), 'misc')
+const miscDirectory = path.join(process.cwd(), 'content/misc')
 
 export function getAbout() {
 	const fullPath = path.join(miscDirectory, 'about.md')

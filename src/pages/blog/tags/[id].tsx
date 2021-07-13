@@ -1,9 +1,10 @@
-import React from 'react'
-import { Text, Heading, useMultiStyleConfig } from '@chakra-ui/react'
+import { Heading, Text, useMultiStyleConfig } from '@chakra-ui/react'
 import { Container, PageHeader, PostsList } from '@components/common'
 import { getAllPostTags, getTagPosts } from '@lib/posts'
 import { SortedPostsType } from 'interfaces'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
+import React from 'react'
 import { capitalize } from 'utils'
 
 type Props = {
@@ -31,6 +32,10 @@ export default function TagPosts({ allPostsData, tag }: Props) {
 
 	return (
 		<>
+			<NextSeo
+				title={title}
+				canonical="https://www.myriaddev.me/blog"
+			/>
 			<PageHeader title={title}>{description}</PageHeader>
 			<Container>
 				{Object.keys(allPostsData).map((year: string) => (
@@ -50,6 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 	return {
 		props: {
+			id,
 			tag: id,
 			allPostsData,
 		},

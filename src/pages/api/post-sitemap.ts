@@ -34,8 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Display output to user
         res.end(sitemapOutput)
     } catch (e) {
-        console.log(e)
         res.send(JSON.stringify(e))
     }
-
 }

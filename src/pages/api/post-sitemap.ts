@@ -2,7 +2,7 @@ import { getAllPostIds } from '@lib/posts'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { SitemapStream, streamToPromise } from 'sitemap'
 
-export default async function(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
         const smStream = new SitemapStream({
             hostname: `https://${req.headers.host}`,

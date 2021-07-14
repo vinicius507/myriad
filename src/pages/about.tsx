@@ -17,7 +17,7 @@ export default function AboutPage({ aboutData }: Props) {
 			<NextSeo
 				title={aboutData.title}
 				description={aboutData.description}
-				canonical="https://www.myriaddev.me/blog"
+				canonical="https://www.myriaddev.me/about"
 			/>
 			<PageHeader title={aboutData.title}>
 				{aboutData.description}

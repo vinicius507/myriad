@@ -2,6 +2,7 @@ import About from '@components/about'
 import Projects from '@components/projects'
 import { Container, PostsList } from '@components/common'
 import { Heading, useStyleConfig } from '@chakra-ui/react'
+import { NextSeo } from 'next-seo'
 import { GetStaticProps } from 'next'
 import { getLatestPosts } from '@lib/posts'
 import { PostType } from 'interfaces'
@@ -13,6 +14,10 @@ export default function Home({ latestPosts }: Props) {
 
 	return (
 		<>
+			<NextSeo
+				description="I'm a Software Engineer based in João Pessoa, Brazil. Currently cadet at École 42. Looking for opportunities."
+				canonical="https://www.myriaddev.me/"
+			/>
 			<About />
 			<Container>
 				<Heading sx={headingStyle}>Latest Posts</Heading>

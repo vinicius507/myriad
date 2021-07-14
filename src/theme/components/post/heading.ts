@@ -12,8 +12,8 @@ const h1 = {
 	borderBottom: '2px solid',
 	borderColor: 'tokyonight.200',
 	color: 'tokyonight.250',
-	mt: 4,
-	mb: 2,
+	mt: 12,
+	mb: 4,
 	_before,
 }
 
@@ -22,16 +22,16 @@ const h2 = {
 	borderBottom: '2px solid',
 	borderColor: 'tokyonight.200',
 	color: 'tokyonight.300',
-	mt: 4,
-	mb: 2,
+	mt: 12,
+	mb: 4,
 	_before,
 }
 
 const h3 = {
 	fontSize: 'xl',
 	color: 'tokyonight.300',
-	mt: 4,
-	mb: 2,
+	mt: 12,
+	mb: 4,
 	_before,
 }
 

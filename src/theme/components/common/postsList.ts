@@ -3,6 +3,7 @@ const PostsList = {
 	baseStyle: {
 		list: {
 			mx: -4,
+			mb: 8,
 		},
 		container: {
 			py: 4,

@@ -25,7 +25,15 @@ export default function Blog({ allPostsData }: Props) {
 			/>
 			<PageHeader title={title}>{description}</PageHeader>
 			<Container>
-				{Object.keys(allPostsData).map((year: string) => (
+				{Object.keys(allPostsData).sort((a, b) => {
+					if (a < b) {
+						return 1
+					} else if (a > b) {
+						return -1
+					} else {
+						return 0
+					}
+				}).map((year: string) => (
 					<>
 						<Heading sx={styles.year}>{year}</Heading>
 						<PostsList posts={allPostsData[year]} />

@@ -48,6 +48,13 @@ const Header = {
 			fontSize: 'xl',
 			mt: 8,
 		},
+		badge: {
+			position: 'relative',
+			w: 24,
+			h: 24,
+			mt: [0, 0, -4],
+			mb: [4, 4, 0],
+		},
 		name: {
 			color: 'tokyonight.300',
 		},

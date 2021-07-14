@@ -1,2 +1,6 @@
+Sitemap: https://www.myriaddev.com/api/post-sitemap
+
 User-agent: *
-Disallow:
+Allow: /*
+
+Disallow: /api/*

@@ -23,7 +23,7 @@ Here's what I use, suggestions are appreciated!
 
 - Coding Editor: [NeoVim](https://github.com/neovim/neovim)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
-- BrowseR: [firefox](https://www.mozilla.org/en-US/firefox)
+- Browser: [firefox](https://www.mozilla.org/en-US/firefox)
 - Music: [spotify](https://spotify.com)
 
 ### Hardware

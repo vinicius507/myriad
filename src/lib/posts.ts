@@ -27,6 +27,7 @@ export function getPostData(id: string): PostType {
 		data: { title: string; date: string }
 	} & GrayMatterFile<string>
 	const tags = String(matterResult.data.tags).split(' ')
+	const badge = matterResult.data.badge
 	const content = matterResult.content
 
 	return {
@@ -34,6 +35,7 @@ export function getPostData(id: string): PostType {
 		content,
 		...matterResult.data,
 		tags,
+		badge,
 	}
 }
 

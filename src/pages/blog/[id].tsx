@@ -21,6 +21,7 @@ export default function Post({ postData }: { postData: PostType }) {
 				description={postData.description}
 				date={postData.date}
 				tags={postData.tags}
+				badge={postData.badge}
 			/>
 			<Container post>
 				<StylesProvider value={styles}>

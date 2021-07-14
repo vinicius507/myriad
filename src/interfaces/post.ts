@@ -5,6 +5,7 @@ interface Post {
 	date: string
 	content: string
 	tags: Array<string>
+	badge?: string
 }
 
 export type SortedPostsType = {

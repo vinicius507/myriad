@@ -1,5 +1,5 @@
 const text = {
-	mb: 2,
+	mb: 4,
 }
 
 export default text

@@ -1,8 +1,0 @@
-Sitemap: https://www.myriaddev.com/api/post-sitemap
-
-User-agent: *
-Allow: /*
-Allow: /blog/*
-Allow: /blog/tags/*
-
-Disallow: /api/*

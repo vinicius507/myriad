@@ -3,7 +3,7 @@ const pre = {
 	bg: 'tokyonight.150',
 	px: 8,
 	py: 4,
-	mb: 2,
+	mb: 4,
 	mx: [-8, -8, 0],
 }
 

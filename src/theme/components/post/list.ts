@@ -1,9 +1,9 @@
 const oList = {
-	mb: 2,
+	mb: 4,
 }
 
 const uList = {
-	mb: 2,
+	mb: 4,
 }
 
 export { oList, uList }

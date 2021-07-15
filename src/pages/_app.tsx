@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 				defaultTitle = "Myriad"
 				titleTemplate = "%s - Myriad"
 				title = {undefined}
-				description = "I'm a Software Engineer based in João Pessoa, Brazil. Currently cadet at École 42. Looking for opportunities."
 				openGraph = {{
 					type: 'website',
 					url: 'https://www.myriaddev.me/',

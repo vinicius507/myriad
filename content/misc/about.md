@@ -3,8 +3,6 @@ title: "About Me"
 description: "I'm Vinícius Gonçalves, software engineer, wannabe writer and FOSS enthusiast."
 ---
 
-![Me](/img/me.png "Me")
-
 Hey, I'm Vinícius! I'm a software engineer in João Pessoa, Brazil. This is the
 spot for some of my projects, tutorials, guides, notes and everything I'd like
 to backup from my brain.
@@ -25,7 +23,7 @@ Here's what I use, suggestions are appreciated!
 
 - Coding Editor: [NeoVim](https://github.com/neovim/neovim)
 - Terminal: [kitty](https://github.com/kovidgoyal/kitty)
-- BrowseR: [firefox](https://www.mozilla.org/en-US/firefox)
+- Browser: [firefox](https://www.mozilla.org/en-US/firefox)
 - Music: [spotify](https://spotify.com)
 
 ### Hardware

@@ -145,7 +145,6 @@ export const getComponents = (
 			return (
 				<>
 					<Image src={src} alt={alt} title={title} sx={styles.img} />
-					<Text sx={styles.imgDescription}>{title}</Text>
 				</>
 			)
 		},

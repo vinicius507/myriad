@@ -6,6 +6,11 @@ const Container = {
 		mx: 0,
 		p: 8,
 	},
+	variants: {
+		Post: {
+			pt: 10,
+		},
+	},
 }
 
 export default Container
